@@ -1,0 +1,261 @@
+/* live.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+}
+
+/* Title styling */
+h2 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Score Display Section */
+#score_display, #innings_status, #target_display, #free_hit_display, #match_result {
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Input Section for Players */
+#input {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#input input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#input button {
+    background-color: #e0a800;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Scoring Buttons */
+#scoring_buttons {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#scoring_buttons button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#scoring_buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Batter and Bowler Stats Display */
+#strikeBatter, #nonStrikeBatter, #bowlerStats {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Match Result Display */
+.match-result {
+    background-color: #ffd700;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px auto;
+    max-width: 80%;
+    animation: fadeIn 0.5s ease-in;
+    text-align: center;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* New Batsman Input */
+#call_by_wicket,#new_bowler_input {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#call_by_wicket,#new_bowler_input input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#call_by_wicket,#new_bowler_input button {
+    background-color: #ffc107;
+    color: black;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#call_by_wicket,#new_bowler_input button:hover {
+    background-color: #e0a800;
+}
+
+/* Navigation Button */
+button {
+    margin: 20px 5px;
+    background-color: #17a2b8;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #138496;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+.commentary-section {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.commentary-box {
+    max-height: 50px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.commentary-item {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.commentary-item:last-child {
+    border-bottom: none;
+}
+
+/* Unified styling for wicket and bowler input sections */
+/* First, remove these duplicate selectors */
+
+        .match-result {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #e0a800;
+            border-radius: 5px;
+            color: #000;
+        }
+
+
+/* Update the hidden class with !important to ensure it overrides other styles */
+.hidden {
+    display: none !important;
+}
+
+/* Update the unified styling to use proper selectors */
+#call_by_wicket, #new_bowler_input {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#call_by_wicket input, #new_bowler_input input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+#call_by_wicket button, #new_bowler_input button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#call_by_wicket button:hover, #new_bowler_input button:hover {
+    background-color: #0056b3;
+}

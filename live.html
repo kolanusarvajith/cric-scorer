@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Live Score 🏏</title>
+    <script src="score.js"></script>
+    <link rel="stylesheet" href="live.css">
+    
+</head>
+<body>
+    <h2>Live Score 🏏</h2>
+
+    <div id="score_display"></div>
+    <div id="innings_status"></div>
+    <div id="target_display"></div>
+    <div id="free_hit_display"></div>
+    <div id="match_result" class="match-result hidden"></div>
+    <div id="run_rate"></div>
+    <div id="required_rate"></div>
+
+    <div id="input">
+        <input type="text" id="striker" placeholder="Enter Striker Name" onkeypress="handleEnterKey(event, 'non_striker')">
+        <input type="text" id="non_striker" placeholder="Enter Non-striker Name" onkeypress="handleEnterKey(event, 'bowler')">
+        <input type="text" id="bowler" placeholder="Enter Bowler Name" onkeypress="handleEnterKey(event, 'confirmPlayersBtn')">
+        <button id="confirmPlayersBtn" onclick="confirmPlayers()">Confirm Players</button>
+    </div>
+
+    <div id="strikeBatter"></div>
+    <div id="nonStrikeBatter"></div>
+    <div id="bowlerStats"></div>
+
+    <div class="commentary-section">
+        <h3>Ball by Ball Commentary</h3>
+        <div id="commentary-box" class="commentary-box"></div>
+    </div>
+
+    <div id="scoring_buttons" class="hidden">
+        <button onclick="updateRuns(0); updateScore();">0</button>
+        <button onclick="updateRuns(1); updateScore();">1</button>
+        <button onclick="updateRuns(2); updateScore();">2</button>
+        <button onclick="updateRuns(3); updateScore();">3</button>
+        <button onclick="updateRuns(4); updateScore();">4</button>
+        <button onclick="updateRuns(6); updateScore();">6</button>
+        <button onclick="updateWicket(); updateScore();">W</button>
+        <button onclick="addWide(); updateScore();">Wide</button>
+        <button onclick="addNoBall(); updateScore();">No Ball</button>
+    </div>
+
+    <div class="container">
+        <div id="call_by_wicket" class="hidden">
+            <input type="text" id="new_striker" placeholder="New Batsman Name">
+            <button onclick="confirmNewStriker()">Confirm Batsman</button>
+        </div>
+    
+        <div id="new_bowler_input" class="hidden">
+            <input type="text" id="bowler_" placeholder="New Bowler Name">
+            <button onclick="confirmNewBowler()">Confirm Bowler</button>
+        </div>
+    </div>
+
+        <button onclick="scorecard()">View Scorecard</button>
+        <button onclick="summary()">Summary</button>
+    </div>
+</body>
+</html>

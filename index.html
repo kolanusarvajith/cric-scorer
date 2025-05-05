@@ -1,0 +1,41 @@
+<html>
+<head>
+    <link rel="stylesheet" href="setup.css">
+    <script src="score.js" ></script>
+</head>
+<body>
+    <h3>Cricket Toss 🪙</h3>
+    <input id="team1" placeholder="Team 1 Name" type="text" 
+           oninput="updateOptions()" 
+           onkeypress="handleEnterKey(event, 'team2')">
+    <p></p>
+    <input id="team2" placeholder="Team 2 Name" type="text" 
+           oninput="updateOptions()" 
+           onkeypress="handleEnterKey(event, 'tossWinner')">
+    <p></p>
+    
+    <label>
+        Select TOSS Winner:
+        <select id="tossWinner" onchange="updateResult()" 
+                onkeypress="handleEnterKey(event, 'winner_choice')">
+            <option value="team1"></option>
+            <option value="team2"></option>
+        </select>
+    </label>
+    <p></p>
+    <label>
+        Winner chose To:
+        <select id="winner_choice" onchange="updateResult()"
+                onkeypress="handleEnterKey(event, 'startMatchBtn')">
+            <option value="bat">bat <img src="bat.jpg" alt="bat" class="choice-icon"></option>
+            <option value="bowl">bowl <img src="bowl.jpg" alt="bowl" class="choice-icon"></option>
+        </select>
+    </label>
+    <p></p>
+
+    <div id="result"></div> 
+    <p></p>
+    <button id="startMatchBtn" onclick="startMatch()" onkeypress="handleStartMatchEnter(event)">Start Match</button>
+
+</body>
+</html>
